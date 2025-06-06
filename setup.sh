@@ -21,10 +21,13 @@ defaults write com.apple.menuextra.clock ShowSeconds -bool true
 
 killall SystemUIServer
 
-# デスクトップに外部ディスクを表示しない
+# 隠しフォルダを表示
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# デスクトップに外部ディスクを非表示
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 
-# デスクトップにCD、DVD、および iPod を表示しない
+# デスクトップにCD、DVD、および iPod を非表示
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # 新規ウインドウはホームディレクトリで開く
