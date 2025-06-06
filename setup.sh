@@ -46,3 +46,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 killall Finder
+
+# Dock を自動的に非表示
+defaults write com.apple.dock autohide -bool true
+
+killall Dock
