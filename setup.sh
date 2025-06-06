@@ -17,3 +17,11 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{
 }'
 
 killall SystemUIServer
+
+# デスクトップに外部ディスクを表示しない
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+
+# デスクトップにCD、DVD、および iPod を表示しない
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+killall Finder
