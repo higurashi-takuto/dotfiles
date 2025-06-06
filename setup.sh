@@ -27,4 +27,19 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 # 新規ウインドウはホームディレクトリで開く
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
+# すべてのファイル名拡張子を表示
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# 拡張子を変更する前に警告を非表示
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# ゴミ箱を空にする前に警告を非表示
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# ネットワークディスクに .DS_Store を作成しない
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# 外部ディスクに .DS_Store を作成しない
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
 killall Finder
