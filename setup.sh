@@ -24,4 +24,7 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 # デスクトップにCD、DVD、および iPod を表示しない
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
+# 新規ウインドウはホームディレクトリで開く
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+
 killall Finder
