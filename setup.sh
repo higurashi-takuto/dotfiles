@@ -50,4 +50,7 @@ killall Finder
 # Dock を自動的に非表示
 defaults write com.apple.dock autohide -bool true
 
+# アプリの提案と最近使用したアプリを Dock に非表示
+defaults write com.apple.dock show-recents -bool false
+
 killall Dock
