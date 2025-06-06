@@ -68,3 +68,5 @@ killall ControlCenter
 
 # スクリーンショットでサムネイルを非表示
 defaults write com.apple.screencapture show-thumbnail -bool false
+
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
