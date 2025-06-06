@@ -42,4 +42,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # 外部ディスクに .DS_Store を作成しない
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+# フォルダを常に先頭に表示する
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
 killall Finder
