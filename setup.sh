@@ -16,6 +16,9 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{
   };
 }'
 
+# 時計を秒まで表示する
+defaults write com.apple.menuextra.clock ShowSeconds -bool true
+
 killall SystemUIServer
 
 # デスクトップに外部ディスクを表示しない
@@ -54,3 +57,11 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
 
 killall Dock
+
+# バッテリーの割合を表示
+defaults write com.apple.controlcenter BatteryShowPercentage -bool true
+
+killall ControlCenter
+
+# スクリーンショットでサムネイルを非表示
+defaults write com.apple.screencapture show-thumbnail -bool false
