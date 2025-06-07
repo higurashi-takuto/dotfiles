@@ -1,4 +1,4 @@
-ZSHRCDIR="${HOME}/dotfiles/.zshrc.d"
+ZSHRCDIR="${HOME}/dotfiles/zshrc.d"
 after_zsh="$ZSHRCDIR/after.zsh"
 
 for i in $ZSHRCDIR/*; do

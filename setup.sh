@@ -70,6 +70,7 @@ killall ControlCenter
 defaults write com.apple.screencapture show-thumbnail -bool false
 
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/Brewfile ~/.Brewfile
 
 # Git
 git config --global user.name "higurashi-takuto"
