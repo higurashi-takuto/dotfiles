@@ -71,7 +71,8 @@ defaults write com.apple.screencapture show-thumbnail -bool false
 
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/Brewfile ~/.Brewfile
-ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
+mkdir -p ~/.config/git
+ln -s ~/dotfiles/gitignore ~/.config/git/ignore
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -fs ~/dotfiles/zshrc ~/.zshrc
 
