@@ -35,12 +35,14 @@ setup_macos_preferences() {
   defaults write com.apple.dock show-recents -bool false # アプリの提案と最近使用したアプリを Dock に非表示
   defaults write com.apple.controlcenter BatteryShowPercentage -bool true # バッテリーの割合を表示
   defaults write com.apple.screencapture show-thumbnail -bool false # スクリーンショットでサムネイルを非表示
+  defaults write com.apple.PowerChime ChimeOnNoHardware -bool true # 電源接続時の音を有効化
 
   # 関連サービスの再起動
   killall SystemUIServer
   killall Finder
   killall Dock
   killall ControlCenter
+  killall PowerChime
 }
 
 # ====================
