@@ -58,13 +58,45 @@ create_symlinks() {
 }
 
 # ====================
+# Homebrew のインストール
+# ====================
+install_homebrew() {
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew bundle --global
+}
+
+# ====================
+# zsh のセットアップ
+# ====================
+setup_zsh() {
+  # デフォルトシェルを zsh に変更
+  echo /opt/homebrew/bin/zsh | sudo tee -a /etc/shells
+  chsh -s /opt/homebrew/bin/zsh
+
+  # prezto のインストール
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
+  sed -i '' s/'sorin'/'agnoster'/ .zprezto/runcoms/zpreztorc
+}
+
+
+setup_asdf() {
+  asdf plugin add nodejs
+  asdf plugin add python
+  asdf plugin add ruby
+}
+
+# ====================
 # 実行
 # ====================
 main() {
   setup_macos_preferences
   create_symlinks
-
-  echo "macOS の設定とシンボリックリンクの作成が完了しました。"
+  install_homebrew
+  setup_zsh
 }
 
 main
