@@ -38,12 +38,18 @@ function startup-tmux(){
     return
   fi
 
-  if tmux has-session -t main 2>/dev/null; then
-    if [[ "$PWD" != "$HOME" ]]; then
-      tmux new-window -t main -c "$PWD"
-    fi
-    tmux attach-session -t main
+  if [ "$TERM_PROGRAM" = "vscode" ]; then
+    session_name="vscode"
   else
-    tmux new-session -s main
+    session_name="main"
+  fi
+
+  if tmux has-session -t "$session_name" 2>/dev/null; then
+    if [[ "$PWD" != "$HOME" ]]; then
+      tmux new-window -t "$session_name" -c "$PWD"
+    fi
+    tmux attach-session -t "$session_name"
+  else
+    tmux new-session -s "$session_name"
   fi
 }
