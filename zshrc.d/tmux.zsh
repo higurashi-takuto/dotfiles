@@ -45,7 +45,7 @@ function startup-tmux(){
   fi
 
   if tmux has-session -t "$session_name" 2>/dev/null; then
-    if [[ "$PWD" != "$HOME" ]]; then
+    if [[ "$PWD" != "$HOME" ]] && [[ "$PWD" != "/" ]]; then
       tmux new-window -t "$session_name" -c "$PWD"
     fi
     tmux attach-session -t "$session_name"
