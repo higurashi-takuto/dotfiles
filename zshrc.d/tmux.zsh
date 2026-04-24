@@ -33,8 +33,32 @@ function ss(){
   fi
 }
 
+function c(){
+  if ! pgrep -xq iTerm2; then
+    echo "c: iTerm2 is not running" >&2
+    return 1
+  fi
+
+  osascript \
+    -e 'on run argv' \
+    -e '  set dirPath to item 1 of argv' \
+    -e '  set shellPath to item 2 of argv' \
+    -e '  set launchCmd to "env CLAUDE_SKIP_TMUX=1 " & quoted form of shellPath & " -l"' \
+    -e '  set runCmd to "cd " & quoted form of dirPath & " && claude"' \
+    -e '  tell application "iTerm2"' \
+    -e '    tell current window' \
+    -e '      create tab with default profile command launchCmd' \
+    -e '      tell current session of current tab' \
+    -e '        write text runCmd' \
+    -e '      end tell' \
+    -e '    end tell' \
+    -e '  end tell' \
+    -e 'end run' \
+    -- "$PWD" "$SHELL" > /dev/null
+}
+
 function startup-tmux(){
-  if [[ -n $TMUX || $- != *l* ]]; then
+  if [[ -n $TMUX || $- != *l* || -n $CLAUDE_SKIP_TMUX ]]; then
     return
   fi
 
