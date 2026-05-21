@@ -54,6 +54,7 @@ create_symlinks() {
   ln -s ~/dotfiles/gitconfig ~/.gitconfig
   ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
   ln -s ~/dotfiles/Brewfile ~/.Brewfile
+  ln -s ~/dotfiles/zed.json ~/.config/zed/settings.json
   ln -fs ~/dotfiles/zshrc ~/.zshrc
 }
 

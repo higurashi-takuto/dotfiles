@@ -1,0 +1,130 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "horizontal_scroll_margin": 1.0,
+  "vertical_scroll_margin": 1.0,
+  "disable_ai": true,
+  "global_lsp_settings": {
+    "button": false
+  },
+  "use_system_window_tabs": false,
+  "bottom_dock_layout": "contained",
+  "tabs": {
+    "file_icons": false,
+    "git_status": false
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "title_bar": {
+    "button_layout": "platform_default",
+    "show_user_picture": false,
+    "show_user_menu": false,
+    "show_sign_in": false,
+    "show_onboarding_banner": true,
+    "show_project_items": true,
+    "show_branch_name": true
+  },
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": false
+  },
+  "status_bar": {
+    "line_endings_button": false,
+    "cursor_position_button": false,
+    "active_encoding_button": "enabled",
+    "active_language_button": true
+  },
+  "completions": {
+    "words_min_length": 1
+  },
+  "toolbar": {
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "fast_scroll_sensitivity": 4.0,
+  "scroll_sensitivity": 1.0,
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "when_closing_with_no_tabs": "keep_window_open",
+  "icon_theme": "Zed (Default)",
+  "buffer_line_height": "standard",
+  "ui_font_family": "AXIS Basic ProN",
+  "buffer_font_family": "Yozora Code",
+  "buffer_font_features": {
+    "liga": false
+  },
+  "terminal": {
+    "button": false,
+    "font_family": "Yozora Code"
+  },
+  "outline_panel": {
+    "indent_size": 16.0,
+    "git_status": true,
+    "folder_icons": false,
+    "file_icons": false,
+    "button": false,
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left"
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "button": false,
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "show_count_badge": false,
+    "diff_stats": true,
+    "folder_icons": true,
+    "default_width": 300.0,
+    "dock": "left"
+  },
+  "project_panel": {
+    "entry_spacing": "standard",
+    "auto_open": {
+      "on_create": true
+    },
+    "hide_hidden": false,
+    "hide_root": true,
+    "diagnostic_badges": false,
+    "git_status_indicator": false,
+    "starts_open": true,
+    "auto_reveal_entries": true,
+    "indent_size": 16.0,
+    "git_status": true,
+    "folder_icons": true,
+    "file_icons": false,
+    "default_width": 300.0,
+    "button": true,
+    "dock": "left",
+    "auto_fold_dirs": false
+  },
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never"
+  },
+  "auto_indent_on_paste": true,
+  "tab_size": 2,
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": "Monokai Nebula"
+}
