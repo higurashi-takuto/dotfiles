@@ -60,7 +60,7 @@
   "fast_scroll_sensitivity": 4.0,
   "scroll_sensitivity": 1.0,
   "scroll_beyond_last_line": "vertical_scroll_margin",
-  "when_closing_with_no_tabs": "keep_window_open",
+  "when_closing_with_no_tabs": "platform_default",
   "icon_theme": "Zed (Default)",
   "buffer_line_height": "standard",
   "ui_font_family": "AXIS Basic ProN",
